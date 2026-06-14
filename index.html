@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundarya Textiles & Silks | Premium Fashion Destination</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Kerala's Premium Fashion Destination for Textiles, Silks, Ethnic Wear, and Family Shopping. Visit us at Annamanada and Kurumassery.">
+    <meta name="keywords" content="Soundarya Textiles, Soundarya Silks, Kerala Fashion, Silk Sarees, Ethnic Wear, Annamanada, Kurumassery">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            charcoal: '#111111',
+                            dark: '#1a1a1a',
+                            gold: '#FFD700',
+                            goldlight: '#ffe55c',
+                            golddark: '#b39700',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Lato"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'luxury-gradient': 'linear-gradient(135deg, #000000 0%, #111111 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --gold: #FFD700;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+
+        /* Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            border-color: rgba(255, 215, 0, 0.4);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .gold-text-gradient {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hover-gold-text {
+            transition: color 0.3s ease;
+        }
+        .hover-gold-text:hover {
+            color: var(--gold);
+        }
+
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom {
+            transition: transform 0.4s ease;
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-brand-gold selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 border-b border-transparent">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group z-50">
+                <img src="https://i.postimg.cc/Jnqf45N8/Copy-of-Untitled-Design.png" alt="Logo" class="h-12 w-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="hidden md:block">
+                    <h2 class="font-heading text-xl font-bold tracking-wider uppercase leading-none">Soundarya</h2>
+                    <p class="text-[10px] tracking-[0.2em] text-brand-gold mt-1 uppercase">Textiles & Silks</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav (Quick Access Menu Integrated) -->
+            <nav class="hidden lg:flex items-center gap-6">
+                <a href="#social" class="text-xs uppercase tracking-widest hover-gold-text font-bold">Social</a>
+                <a href="https://www.soundaryatextiles.in/" target="_blank" class="text-xs uppercase tracking-widest hover-gold-text font-bold">Website</a>
+                <a href="https://wa.me/919037303020" target="_blank" class="text-xs uppercase tracking-widest text-[#25D366] hover:text-white transition-colors font-bold">WhatsApp</a>
+                <a href="#stores" class="text-xs uppercase tracking-widest hover-gold-text font-bold">Location</a>
+                <a href="#" class="text-xs uppercase tracking-widest text-brand-gold hover:text-white transition-colors font-bold">Giveaway</a>
+                <a href="#" class="text-xs uppercase tracking-widest hover-gold-text font-bold">Winners</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-gold z-50 p-2">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay (Atom Guy Style Blocks) -->
+        <div id="mobile-nav" class="fixed inset-0 bg-black/95 backdrop-blur-xl flex flex-col pt-24 px-6 gap-3 translate-x-full transition-transform duration-500 z-40 overflow-y-auto pb-10">
+            <!-- Social Tab -->
+            <a href="#social" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                    <i class="fas fa-share-alt text-brand-gold text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Social</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+
+            <!-- Website Tab -->
+            <a href="https://www.soundaryatextiles.in/" target="_blank" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                    <i class="fas fa-globe text-brand-gold text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Website</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+
+            <!-- WhatsApp Tab -->
+            <a href="https://wa.me/919037303020" target="_blank" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-[#25D366]/50 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#25D366]/50 transition-colors">
+                    <i class="fab fa-whatsapp text-[#25D366] text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-[#25D366] transition-colors text-white">WhatsApp</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+
+            <!-- Location Tab -->
+            <a href="#stores" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                    <i class="fas fa-map-marker-alt text-brand-gold text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Location</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+            
+            <!-- Giveaway Tab -->
+            <a href="#" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                    <i class="fas fa-gift text-brand-gold text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Giveaway</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+
+            <!-- Giveaway Winners Tab -->
+            <a href="#" class="mobile-link w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300">
+                <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                    <i class="fas fa-trophy text-brand-gold text-xl"></i>
+                </div>
+                <span class="flex-1 text-center font-heading tracking-widest uppercase text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Winners</span>
+                <div class="w-12 shrink-0"></div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Fullscreen Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-brand-black">
+            
+            <!-- Background Image overlay -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1610030469983-98e550d6153c?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-luminosity"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black"></div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+                <div class="hero-content mt-8 w-full">
+                    <p class="text-brand-gold text-sm md:text-base tracking-[0.3em] uppercase mb-6 drop-shadow-md">Welcome to Elegance</p>
+                    <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+                        <span class="block">Kerala's Premium</span>
+                        <span class="gold-text-gradient block mt-2 text-glow">Fashion Destination</span>
+                    </h1>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex justify-center gap-4 md:gap-6 mb-8 relative z-20">
+                        <a href="https://youtube.com/@soundarya_textiles?si=ttVQJNVOowDGOlaY" target="_blank" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-gold hover:border-brand-gold transition-all duration-300 bg-black/50 backdrop-blur-sm">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/soundarya_textiles_annamanada/" target="_blank" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-gold hover:border-brand-gold transition-all duration-300 bg-black/50 backdrop-blur-sm">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.facebook.com/soundaryatextiles99/" target="_blank" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-gold hover:border-brand-gold transition-all duration-300 bg-black/50 backdrop-blur-sm">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/KkCNYXpmhmLbCmodA" target="_blank" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-gold hover:border-brand-gold transition-all duration-300 bg-black/50 backdrop-blur-sm">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Access Menu (Atom Guy Style) -->
+                    <div class="w-full max-w-lg mx-auto flex flex-col gap-3 relative z-20">
+                        <!-- Social Tab -->
+                        <a href="#social" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,215,0,0.1)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                                <i class="fas fa-share-alt text-brand-gold text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Social</span>
+                            <div class="w-12 shrink-0"></div> <!-- Balancer for exact centering -->
+                        </a>
+
+                        <!-- Website Tab -->
+                        <a href="https://www.soundaryatextiles.in/" target="_blank" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,215,0,0.1)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                                <i class="fas fa-globe text-brand-gold text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Website</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+
+                        <!-- WhatsApp Tab -->
+                        <a href="https://wa.me/919947004051" target="_blank" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-[#25D366]/50 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(37,211,102,0.15)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#25D366]/50 transition-colors">
+                                <i class="fab fa-whatsapp text-[#25D366] text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-[#25D366] transition-colors text-white">WhatsApp Annamanada</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+
+                        <!-- WhatsApp Tab -->
+                        <a href="https://wa.me/916235004051" target="_blank" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-[#25D366]/50 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(37,211,102,0.15)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#25D366]/50 transition-colors">
+                                <i class="fab fa-whatsapp text-[#25D366] text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-[#25D366] transition-colors text-white">WhatsApp Kurumassery</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+
+                        <!-- Location Tab -->
+                        <a href="#stores" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,215,0,0.1)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                                <i class="fas fa-map-marker-alt text-brand-gold text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Location</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+                        
+                        <!-- Giveaway Tab -->
+                        <a href="https://sites.google.com/view/soundaryatextileswinners" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,215,0,0.1)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                                <i class="fas fa-gift text-brand-gold text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Giveaway</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+
+                        <!-- Giveaway Winners Tab -->
+                        <a href="https://sites.google.com/view/soundaryatextileswinners" class="w-full bg-[#1a1a1a] border border-white/5 hover:border-brand-gold/40 p-2 rounded-xl flex items-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,215,0,0.1)]">
+                            <div class="w-12 h-12 rounded-lg bg-black flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/50 transition-colors">
+                                <i class="fas fa-trophy text-brand-gold text-xl"></i>
+                            </div>
+                            <span class="flex-1 text-center font-heading tracking-widest uppercase text-xs md:text-sm font-bold group-hover:text-brand-gold transition-colors text-white">Giveaway Winners</span>
+                            <div class="w-12 shrink-0"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section id="collections" class="py-24 bg-brand-charcoal relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl text-white mb-4"><span class="text-brand-gold italic">Curated</span> Collections</h2>
+                    <div class="w-24 h-[1px] bg-brand-gold mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=800&auto=format&fit=crop" alt="Premium Sarees" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Premium Sarees</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6153c?q=80&w=800&auto=format&fit=crop" alt="Bridal Silks" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Bridal Silks</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=800&auto=format&fit=crop" alt="Mens Wear" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Mens Wear</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1621072156002-e2fcc60b4ef3?q=80&w=800&auto=format&fit=crop" alt="Kids Wear" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Kids Wear</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" alt="Kurtis & Tops" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Designer Kurtis</h3>
+                        </div>
+                    </div>
+
+                     <!-- Card 6 -->
+                     <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1542282811-943ef1a17770?q=80&w=800&auto=format&fit=crop" alt="Palazzo Sets" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Palazzo Sets</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1591030999039-4467ecbcaf5d?q=80&w=800&auto=format&fit=crop" alt="Ethnic Wear" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Ethnic Wear</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="group glass rounded-sm overflow-hidden">
+                        <div class="img-zoom-container h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1599643477874-5054cb24953c?q=80&w=800&auto=format&fit=crop" alt="Accessories" class="img-zoom w-full h-full object-cover opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 pointer-events-none">
+                            <h3 class="font-heading text-2xl text-white mb-1 group-hover:text-brand-gold transition-colors">Accessories</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="py-24 bg-brand-black relative overflow-hidden border-y border-white/5">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <p class="text-brand-gold text-sm tracking-[0.2em] uppercase mb-4">The Legacy</p>
+                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight">
+                            Crafting <span class="text-brand-gold italic">Elegance</span><br>Since Inception
+                        </h2>
+                        <p class="text-gray-300 text-lg font-light leading-relaxed mb-8">
+                            Soundarya Textiles and Soundarya Silks are trusted destinations for premium fashion, textiles, silks, ethnic wear, and family shopping. We combine quality, elegance, and affordability to provide an exceptional shopping experience for customers across Kerala.
+                        </p>
+                        <img src="https://i.postimg.cc/Jnqf45N8/Copy-of-Untitled-Design.png" alt="Signature" class="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                    </div>
+                    
+                    <div class="lg:w-1/2 w-full grid grid-cols-2 gap-6">
+                        <div class="glass p-8 text-center rounded-sm">
+                            <div class="text-4xl md:text-5xl font-heading text-brand-gold mb-2">2</div>
+                            <p class="text-sm uppercase tracking-widest text-gray-400">Premium Stores</p>
+                        </div>
+                        <div class="glass p-8 text-center rounded-sm mt-8">
+                            <div class="text-4xl md:text-5xl font-heading text-brand-gold mb-2">100k+</div>
+                            <p class="text-sm uppercase tracking-widest text-gray-400">Happy Clients</p>
+                        </div>
+                        <div class="glass p-8 text-center rounded-sm -mt-8">
+                            <div class="text-4xl md:text-5xl font-heading text-brand-gold mb-2">10k+</div>
+                            <p class="text-sm uppercase tracking-widest text-gray-400">Collections</p>
+                        </div>
+                        <div class="glass p-8 text-center rounded-sm">
+                            <div class="text-4xl md:text-5xl font-heading text-brand-gold mb-2">100%</div>
+                            <p class="text-sm uppercase tracking-widest text-gray-400">Authentic Silks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Stores -->
+        <section id="stores" class="py-24 bg-brand-charcoal">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl text-white mb-4">Our <span class="text-brand-gold italic">Flagship</span> Stores</h2>
+                    <div class="w-24 h-[1px] bg-brand-gold mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Store 1 -->
+                    <div class="glass p-1 rounded-sm group">
+                        <div class="bg-brand-dark p-8 h-full relative overflow-hidden">
+                            <i class="fas fa-store text-3xl text-brand-gold mb-6"></i>
+                            <h3 class="font-heading text-3xl mb-2 group-hover:text-brand-gold transition-colors">Soundarya Textiles</h3>
+                            <p class="text-xl text-gray-400 font-light mb-6">Annamanada</p>
+                            
+                            <p class="text-sm text-gray-500 mb-8 max-w-sm">Experience our expansive collection of premium textiles and family fashion in the heart of Annamanada.</p>
+                            
+                            <a href="https://maps.app.goo.gl/KkCNYXpmhmLbCmodA" target="_blank" class="inline-flex items-center gap-3 text-sm uppercase tracking-widest border border-brand-gold/30 px-6 py-3 hover:bg-brand-gold hover:text-black transition-all duration-300">
+                                View Location <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Store 2 -->
+                    <div class="glass p-1 rounded-sm group">
+                        <div class="bg-brand-dark p-8 h-full relative overflow-hidden">
+                            <i class="fas fa-gem text-3xl text-brand-gold mb-6"></i>
+                            <h3 class="font-heading text-3xl mb-2 group-hover:text-brand-gold transition-colors">Soundarya Silks</h3>
+                            <p class="text-xl text-gray-400 font-light mb-6">Kurumassery</p>
+                            
+                            <p class="text-sm text-gray-500 mb-8 max-w-sm">Discover authentic bridal silks and exclusive designer wear at our premium Kurumassery boutique.</p>
+                            
+                            <a href="https://maps.app.goo.gl/MomQPRkVNuCjvJeF6" target="_blank" class="inline-flex items-center gap-3 text-sm uppercase tracking-widest border border-brand-gold/30 px-6 py-3 hover:bg-brand-gold hover:text-black transition-all duration-300">
+                                View Location <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Gallery -->
+        <section id="social" class="py-24 bg-brand-black">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl text-white mb-4"><span class="text-brand-gold italic">Social</span> Exclusives</h2>
+                    <p class="text-gray-400 tracking-widest uppercase text-sm">Join our digital runway</p>
+                </div>
+
+                <!-- Instagram Section -->
+                <div class="mb-20">
+                    <div class="flex justify-between items-end mb-8">
+                        <div>
+                            <i class="fab fa-instagram text-2xl text-brand-gold mb-2"></i>
+                            <h3 class="font-heading text-2xl">Instagram Gallery</h3>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://www.instagram.com/soundarya_textiles_annamanada/" target="_blank" class="text-xs uppercase tracking-wider text-gray-400 hover:text-brand-gold">@Annamanada</a>
+                            <span class="text-gray-600">|</span>
+                            <a href="https://www.instagram.com/soundarya_silks_kurumassery/" target="_blank" class="text-xs uppercase tracking-wider text-gray-400 hover:text-brand-gold">@Kurumassery</a>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Mock Insta Posts -->
+                        <a href="https://www.instagram.com/soundarya_textiles_annamanada/" target="_blank" class="block group relative aspect-square overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1583391733914-9fa2dc8e841f?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fab fa-instagram text-3xl text-white"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/soundarya_silks_kurumassery/" target="_blank" class="block group relative aspect-square overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1610030469607-4a0b27be633b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fab fa-instagram text-3xl text-white"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/soundarya_textiles_annamanada/" target="_blank" class="block group relative aspect-square overflow-hidden hidden md:block">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fab fa-instagram text-3xl text-white"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/soundarya_silks_kurumassery/" target="_blank" class="block group relative aspect-square overflow-hidden hidden md:block">
+                            <img src="https://images.unsplash.com/photo-1599643477874-5054cb24953c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fab fa-instagram text-3xl text-white"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- YouTube & Facebook Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- YouTube Card -->
+                    <div class="glass p-8 rounded-sm text-center flex flex-col items-center justify-center min-h-[300px] group">
+                        <i class="fab fa-youtube text-5xl text-red-600 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="font-heading text-2xl mb-4">Soundarya TV</h3>
+                        <p class="text-sm text-gray-400 mb-8 max-w-xs">Watch our latest collections, styling tips, and store walkthroughs.</p>
+                        <a href="https://youtube.com/@soundarya_textiles?si=ttVQJNVOowDGOlaY" target="_blank" class="bg-red-600 text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-red-600 transition-colors duration-300">
+                            Subscribe Now
+                        </a>
+                    </div>
+
+                    <!-- Facebook Card -->
+                    <div class="glass p-8 rounded-sm text-center flex flex-col items-center justify-center min-h-[300px] group">
+                        <i class="fab fa-facebook-f text-5xl text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="font-heading text-2xl mb-4">Community</h3>
+                        <p class="text-sm text-gray-400 mb-8 max-w-xs">Join our Facebook community for exclusive updates and offers.</p>
+                        <a href="https://www.facebook.com/soundaryatextiles99/" target="_blank" class="bg-blue-600 text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-blue-600 transition-colors duration-300">
+                            Follow Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-brand-charcoal relative">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Form -->
+                    <div>
+                        <h2 class="font-heading text-4xl mb-2">Get in <span class="text-brand-gold italic">Touch</span></h2>
+                        <p class="text-gray-400 text-sm mb-10 tracking-widest uppercase">Book an appointment or inquire</p>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div class="relative group">
+                                <input type="text" id="name" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                                <label for="name" class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs uppercase tracking-wider">Your Name</label>
+                            </div>
+                            <div class="relative group">
+                                <input type="tel" id="phone" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                                <label for="phone" class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs uppercase tracking-wider">Phone Number</label>
+                            </div>
+                            <div class="relative group">
+                                <input type="email" id="email" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent">
+                                <label for="email" class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs uppercase tracking-wider">Email Address</label>
+                            </div>
+                            <div class="relative group">
+                                <textarea id="message" rows="4" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-brand-gold transition-colors peer placeholder-transparent resize-none"></textarea>
+                                <label for="message" class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-xs uppercase tracking-wider">Message</label>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-gold text-black py-4 uppercase tracking-widest text-sm font-bold hover:bg-white transition-colors duration-300 mt-4">
+                                Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="glass p-10 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <img src="https://i.postimg.cc/Jnqf45N8/Copy-of-Untitled-Design.png" alt="Logo" class="h-16 w-auto mb-8">
+                            <p class="text-xl font-heading mb-6">Kerala's Premium Fashion Destination.</p>
+                            
+                            <div class="space-y-4 text-sm text-gray-400">
+                                <p><strong class="text-white uppercase tracking-wider block mb-1">Soundarya Textiles</strong> Annamanada, Kerala</p>
+                                <p><strong class="text-white uppercase tracking-wider block mb-1">Soundarya Silks</strong> Kurumassery, Kerala</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-12">
+                            <p class="uppercase tracking-widest text-xs text-brand-gold mb-4">Connect With Us</p>
+                            <div class="flex gap-4">
+                                <a href="https://youtube.com/@soundarya_textiles?si=ttVQJNVOowDGOlaY" target="_blank" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/soundarya_textiles_annamanada/" target="_blank" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/soundaryatextiles99/" target="_blank" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-white/10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="https://i.postimg.cc/Jnqf45N8/Copy-of-Untitled-Design.png" alt="Logo" class="h-8">
+            </div>
+            
+            <p class="text-gray-500 text-xs tracking-widest uppercase text-center">
+                © <span id="year"></span> Soundarya Textiles & Soundarya Silks. All Rights Reserved.
+            </p>
+            
+            <div class="flex gap-6 text-xs uppercase tracking-widest text-gray-500">
+                <a href="#" class="hover:text-brand-gold transition-colors">Privacy</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/90', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.remove('py-4', 'border-transparent');
+                navbar.classList.add('py-2', 'border-white/10');
+            } else {
+                navbar.classList.remove('bg-black/90', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.add('py-4', 'border-transparent');
+                navbar.classList.remove('py-2', 'border-white/10');
+            }
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileNav.classList.remove('translate-x-full');
+                menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling behind menu
+            } else {
+                mobileNav.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                isMenuOpen = false;
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.style.backgroundColor = 'white';
+            
+            // Simulate action
+            setTimeout(() => {
+                btn.innerText = 'Message Sent!';
+                btn.style.backgroundColor = '#4ade80'; // Green
+                btn.style.color = 'black';
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '#FFD700'; // Gold
+                }, 3000);
+            }, 1000);
+        });
+
+    </script>
+</body>
+</html>
